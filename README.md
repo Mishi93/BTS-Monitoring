@@ -42,14 +42,6 @@ Network Load: Gauge visualization.
 
 BTS Risk Map: Interactive map showing all towers with risk-based color coding and marker size.
 
-📂 File Structure
-BTS-Monitoring-Dashboard/
-│
-├── app.py                  # Main Streamlit dashboard
-├── bts_failure_model.pkl    # Pre-trained fault prediction model
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
-
 ⚡ Technologies
 
 Python 3.x
