@@ -41,3 +41,23 @@ Fault Trend: Area chart showing daily fault counts.
 Network Load: Gauge visualization.
 
 BTS Risk Map: Interactive map showing all towers with risk-based color coding and marker size.
+
+📂 File Structure
+BTS-Monitoring-Dashboard/
+│
+├── app.py                  # Main Streamlit dashboard
+├── bts_failure_model.pkl    # Pre-trained fault prediction model
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
+
+⚡ Technologies
+
+Python 3.x
+
+Streamlit
+
+Pandas, NumPy
+
+Plotly (express and graph_objects)
+
+Joblib (for model loading)
