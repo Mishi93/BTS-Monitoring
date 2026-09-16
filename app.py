@@ -189,19 +189,23 @@ fig_map = px.scatter_map(
     bts_map_data,
     lat="latitude",
     lon="longitude",
-    hover_name="location",
-    hover_data=["status","fault_prob"],
-    color="status",
     size="size",
-    zoom=11,
-    height=550,
-    color_discrete_map={"Normal":"green","Minor Fault":"orange","Major Fault":"red"},
-    opacity=0.7
+    color="status",
+    hover_name="location",
+    hover_data=["latitude", "longitude"],
+    zoom=5,
+    height=600
 )
+
 fig_map.update_layout(
-    mapbox_style="open-street-map",
-    mapbox_center={"lat": bts_map_data["latitude"].mean(),
-                   "lon": bts_map_data["longitude"].mean()},
+    map_style="open-street-map",
+    map_zoom=5,
+    map_center={
+        "lat": 30.3753,
+        "lon": 69.3451
+    },
+    margin={"r": 0, "t": 0, "l": 0, "b": 0},
     legend_title_text="BTS Status"
 )
-st.plotly_chart(fig_map, width='stretch')
+
+st.plotly_chart(fig_map, use_container_width=True)
