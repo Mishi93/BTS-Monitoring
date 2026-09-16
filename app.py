@@ -185,7 +185,7 @@ bts_map_data["size"] = 10 + bts_map_data["fault_prob"]*30
 bts_map_data.loc[bts_map_data["location"] == location, "size"] += 10
 
 # Map
-fig_map = px.scatter_mapbox(
+fig_map = px.scatter_map(
     bts_map_data,
     lat="latitude",
     lon="longitude",
